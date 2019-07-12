@@ -2,15 +2,15 @@
   [docker.dockerConfig]
     enable = true
     name = "petstore"
-    registry = 'docker.wso2.com'
-    tag = 'v1'
+    registry = 'registry.wso2.org'
+    tag = '1.0.TARGET_VERSION'
     #buildImage = ''
     #dockerHost = ''
     #dockerCertPath = ''
     #baseImage = ''
     #enableDebug = ''
     #debugPort = ''
-    #push = ''
+    push = 'true'
     #username = ''
     #password = ''
   [docker.dockerCopyFiles]

@@ -131,49 +131,6 @@ function getOpenAPIs() returns map<json> {
           }
         }
       }
-    },
-    "/pet2/{petId}" : {
-      "get" : {
-        "tags" : [ "pet" ],
-        "summary" : "Find pet by ID",
-        "description" : "Returns a single pet",
-        "operationId" : "getPetById",
-        "parameters" : [ {
-          "name" : "petId",
-          "in" : "path",
-          "description" : "ID of pet to return",
-          "required" : true,
-          "style" : "SIMPLE",
-          "explode" : false,
-          "schema" : {
-            "type" : "integer",
-            "format" : "int64"
-          }
-        } ],
-        "responses" : {
-          "200" : {
-            "description" : "successful operation",
-            "content" : {
-              "application/xml" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Pet"
-                }
-              },
-              "application/json" : {
-                "schema" : {
-                  "$ref" : "#/components/schemas/Pet"
-                }
-              }
-            }
-          },
-          "400" : {
-            "description" : "Invalid ID supplied"
-          },
-          "404" : {
-            "description" : "Pet not found"
-          }
-        }
-      }
     }
   },
   "components" : {
@@ -277,7 +234,7 @@ function getOpenAPIs() returns map<json> {
   "extensions" : {
     "x-wso2-basePath" : "/petstore/v1",
     "x-wso2-production-endpoints" : {
-      "urls" : [ "https://petstore.swagger.io/v2" ]
+      "urls" : [ "http://www.mocky.io/v2/5d28af622c000066003edbcb" ]
     }
   }
 }  };

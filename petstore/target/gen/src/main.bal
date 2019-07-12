@@ -1,9 +1,8 @@
 
 public function main() {
     
-    string[] Swagger_Petstore_New__1_0_0_service = [ "get_179ecc8c_6dc3_46a8_b2af_57a3c595e810"
-                                , "get_2b886230_3e2a_4e1a_9d40_c67a6cd3ef5f"
-                                , "get_0e821612_92b6_4c0e_8bda_2470d27c8adb"
+    string[] Swagger_Petstore_New__1_0_0_service = [ "get_e02d5567_4b97_444f_9632_3cdb99948f9b"
+                                , "get_984f91c2_bd72_4d80_a5a9_cdd63d922264"
                                 ];
     gateway:populateAnnotationMaps("Swagger_Petstore_New__1_0_0", Swagger_Petstore_New__1_0_0, Swagger_Petstore_New__1_0_0_service);
     
