@@ -7,14 +7,20 @@ JENKINS_DIRECTORY='/var/lib/jenkins/workspace/unisys-gateway-pipeline'
 echo "The build number is ", ${TARGET_VERSION}
 
 
-cp -r ${JENKINS_DIRECTORY}/pestore ${TOOLKIT_DIRECTORY}/bin
+cp -r ${JENKINS_DIRECTORY}/petstore ${TOOLKIT_DIRECTORY}/bin
 cd ${TOOLKIT_DIRECTORY}/bin/
 
 
+printf "Build the Product Image "
+./micro-gw build petstore --deployment-config deployment.toml
 
-## the target URL for ZAP to scan
-#TARGET_URL="http://192.168.33.20:8888"
-#
+if [ $? -eq 0 ]; then
+   printf "Starting the rolling-update"
+#    rolling update command
+celse
+   exit
+fi
+
 #printf "Starting the Product Container"
 #PRODUCT_CONTAINER_ID=$(docker run -p 8888:8080 -d registry.wso2.org/weather-service:1.0.${TARGET_VERSION})
 #
@@ -25,20 +31,9 @@ cd ${TOOLKIT_DIRECTORY}/bin/
 #    exit
 #fi
 
-#docker exec $ZAP_CONTAINER_ID zap-cli -p 2375 status -t 60 && docker exec $ZAP_CONTAINER_ID zap-cli -p 2375 open-url $TARGET_URL
-#docker exec $ZAP_CONTAINER_ID zap-cli -p 2375 spider $TARGET_URL
-#docker exec $ZAP_CONTAINER_ID zap-cli -p 2375 active-scan -r $TARGET_URL
-#docker exec $ZAP_CONTAINER_ID zap-cli -p 2375 alerts
-#
-## docker logs [container ID or name]
 #divider==================================================================
 #printf "\n"
 #printf "$divider"
-#printf "ZAP-daemon log output follows"
+#printf "Rolling update process is completed."
 #printf "$divider"
 #printf "\n"
-#
-#docker exec $ZAP_CONTAINER_ID zap-cli -p 2375 report -o vulnerability.html -f html
-#
-##docker logs $ZAP_CONTAINER_ID
-#docker stop $ZAP_CONTAINER_ID $PRODUCT_CONTAINER_ID && docker rm $ZAP_CONTAINER_ID $PRODUCT_CONTAINER_ID
