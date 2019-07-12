@@ -31,7 +31,7 @@ tags:
 x-wso2-basePath: /petstore/v1
 x-wso2-production-endpoints:
   urls:
-  - http://www.mocky.io/v2/5d28af622c000066003edbcb
+  - http://www.mocky.io/v2/5d28b06c2c00008b633edbce
 paths:
   "/pet/findByStatus":
     get:
