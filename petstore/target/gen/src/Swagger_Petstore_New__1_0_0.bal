@@ -86,7 +86,7 @@ apiSecureListener {
         }
     }
     @gateway:RateLimit{policy : ""}
-    resource function get_4f79d3a3_8f23_478c_a9e4_93fc6e1f5f7f (http:Caller outboundEp, http:Request req) {
+    resource function get_179ecc8c_6dc3_46a8_b2af_57a3c595e810 (http:Caller outboundEp, http:Request req) {
         handleExpectHeaderForSwagger_Petstore_New__1_0_0(outboundEp, req);
     
     
@@ -187,7 +187,7 @@ clientResponse = res;
         }
     }
     @gateway:RateLimit{policy : ""}
-    resource function get_a70334aa_494a_4fc4_9ac0_e22722f786c6 (http:Caller outboundEp, http:Request req) {
+    resource function get_2b886230_3e2a_4e1a_9d40_c67a6cd3ef5f (http:Caller outboundEp, http:Request req) {
         handleExpectHeaderForSwagger_Petstore_New__1_0_0(outboundEp, req);
     
     
@@ -288,7 +288,7 @@ clientResponse = res;
         }
     }
     @gateway:RateLimit{policy : ""}
-    resource function get_dba6d9e9_c67c_4951_a138_e96b10307488 (http:Caller outboundEp, http:Request req) {
+    resource function get_0e821612_92b6_4c0e_8bda_2470d27c8adb (http:Caller outboundEp, http:Request req) {
         handleExpectHeaderForSwagger_Petstore_New__1_0_0(outboundEp, req);
     
     

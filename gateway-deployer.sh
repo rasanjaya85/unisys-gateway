@@ -1,8 +1,16 @@
 #!/usr/bin/env bash
 
 TARGET_VERSION=$1
+TOOLKIT_DIRECTORY='/home/vagrant/toolkit'
+JENKINS_DIRECTORY='/var/lib/jenkins/workspace/unisys-gateway-pipeline'
 
-echo ${TARGET_VERSION}
+echo "The build number is ", ${TARGET_VERSION}
+
+
+cp -r ${JENKINS_DIRECTORY}/pestore ${TOOLKIT_DIRECTORY}/bin
+cd ${TOOLKIT_DIRECTORY}/bin/
+
+
 
 ## the target URL for ZAP to scan
 #TARGET_URL="http://192.168.33.20:8888"
